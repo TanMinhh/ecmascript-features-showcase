@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Cat Reminder",
+    "version": "1.3",
+    "permissions": [
+        "alarms"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "sleeping_cat.png",
+                "awake_cat.png"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ]
+}
